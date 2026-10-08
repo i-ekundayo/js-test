@@ -1,3 +1,8 @@
+// MY PREDICTIONS
+// A, E, K, D, C, F, J, G, H, I, B
+
+// My prediction was wrong. G comes before J because the G executes immediately it reaches the async function. I initially thought the outer await would delay its execution. The correct order is: A, E, K, D, C, F, G, J, H, I, B
+
 console.log("A");
 setTimeout(() => console.log("B"), 0);
 queueMicrotask(() => console.log("C"));
